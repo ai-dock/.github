@@ -6,6 +6,10 @@ AI-Dock is committed to making AI and ML accessible to all - Whether you have a 
 
 All images are supplied with a `docker-compose.yaml` for easy startup locally (or where you have full control over a remote machine).
 
-Images also support passing environment variables via `docker run` for customisation to ensure compatibility with container cloud providers [vast.ai](https://cloud.vast.ai/?ref=62897) & [runpod.io](https://runpod.io/?ref=m0vk9g4f).
+Images also support passing environment variables via `docker run` for customisation to ensure compatibility with container cloud providers [vast.ai](https://link.ai-dock.org/vast.ai) & [runpod.io](https://link.ai-dock.org/runpod.io).
  
-Images that contain Jupyter are also tested for compatibility with [Paperspace](https://console.paperspace.com/signup?R=FI2IEQI).
+Images that contain Jupyter are also tested for compatibility with [Paperspace Gradient](https://link.ai-dock.org/console.paperspace.com).
+
+## A note
+
+These images defy the docker principle of one process per container - Processes are managed by supervisord because our target cloud environments only support running a single container.
